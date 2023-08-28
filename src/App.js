@@ -1,9 +1,14 @@
 import './App.css';
+import { TodoCounter } from './TodoCounter';
+import { TodoSearch } from './TodoSearch';
+import { CreateTodoButton } from './CreateTodoButton';
+import { TodoList } from './TodoList'
+
 
 function App() {
   return (
     <div className="App">
-      <TodoCount
+      <TodoCounter
         completed={13}
         total={19}
       />
@@ -31,21 +36,6 @@ function TodoItem(){
       </li>      
       </div>
   );
-}
-
-function TodoCount(props) {
-    return (
-        <h2>
-            Completaste {props.completed} de {props.total} TODOs
-        </h2>
-    );
-}
-function TodoSearch(){
-  return(
-  <div>
-    
-  </div>
-  )
 }
 
 export default App;
