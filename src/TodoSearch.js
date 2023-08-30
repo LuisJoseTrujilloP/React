@@ -6,6 +6,7 @@ function TodoSearch(){
     const [state, setState] = React.useState('');
      // To work with the state we cant just change it as we would with any variable, we need to use a function to work with it
     // Changer function
+    // the reason why  we would do this is to tell react the we need to re render the component to change it, 
 
     return(
             <input 
