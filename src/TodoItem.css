@@ -1,0 +1,64 @@
+li{
+    display: flex;
+    justify-content: space-between;
+}
+.todoItem{
+    padding-right: 2px;
+    background-color: #3d3b3b3d;
+    display: flex;
+    gap: 10px;
+    margin: 0 0 6%;
+    width: 18rem;
+    border-radius: 5px;
+    height: 2.5rem;
+    align-items: center;
+    box-shadow: 2px 3px 34px -7px rgba(109, 109, 109, 0.473);
+}
+
+.circle{
+    position: relative;
+    margin-left: 4%;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: linear-gradient( to bottom, #375205b0, #bbff3db0);
+    ;
+}
+
+.circle::before{
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    background-color: #bbff3db0;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+}
+
+.TodoItem-ready{
+    
+    background-color: #375205b0;
+    text-decoration:line-through;
+}
+
+
+.TodoItem-checket::before{
+    color: white;
+    content: '✓';
+    background-color: #bbff3db0;
+}
+
+.eliminateItem {
+    padding-right: 1vw;
+}
+
+.eliminateItem::before{
+    content: 'x';
+}
+
+.eliminateItem:hover{
+    color: red;
+}
+
+.pointer{cursor:pointer;}
