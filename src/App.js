@@ -33,8 +33,11 @@ const defaultTodos = [
 function App() {
   const [state, setState] = React.useState(defaultTodos);
   const [search, setSearch] = React.useState('');
-  const searchTodos = state.filter( (todo) => {
-    return todo.text.toLowerCase().includes(search)
+
+  const searchTodos = state.filter((todo) => {
+    const searchText = search.toLowerCase();
+    const todoText = todo.text.toLowerCase();
+    return todoText.includes(searchText);
   });
 
   const completedTodo = state.filter(todo => !!todo.completed).length
