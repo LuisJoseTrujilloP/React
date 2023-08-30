@@ -41,6 +41,17 @@ function App() {
     return todoText.includes(searchText);
   });
   
+  const onComplete = (text) => {
+    const todoIndex = state.findIndex((todo) => todo.text === text);
+    const newTodos = [...state];
+    newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
+    setState(newTodos);
+  };
+  const onDelete = (text) => {
+    const newTodos = state.filter((todo) => todo.text !== text);
+    setState(newTodos);
+  };
+
 
   const completedTodo = state.filter(todo => !!todo.completed).length
   const totalTods = state.length;
@@ -62,6 +73,8 @@ function App() {
               key={todo.text}
               text={todo.text}
               completed={todo.completed}
+              onComplete={() => {onComplete(todo.text)}}
+              onDelete={() => {onDelete(todo.text)}}
             />
           ))}
         </TodoList>
