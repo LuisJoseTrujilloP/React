@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import { CreateTodoButton } from './CreateTodoButton';
 import { TodoCounter } from './TodoCounter';
@@ -30,13 +31,23 @@ const defaultTodos = [
 // in case I want to send , not a div containing all the elment insinde of the app but all the elements without breaking the rule of react
 // that keeps you from sending more than one element per return in any component we can use React.
 function App() {
+  const [state, setState] = React.useState(defaultTodos);
+  const [search, setSearch] = React.useState('');
+
+
+  const completedTodo = state.filter(todo => !!todo.completed).length
+  const totalTods = state.length;
   return (
+    
       <div className='container'>
         
-        <TodoSearch/>
+        <TodoSearch
+        search={search}
+        setSearch={setSearch}
+        />
         <TodoCounter
-          completed={13}
-          total={19}
+          completed={completedTodo}
+          total={totalTods}
         />
         <TodoList>
           {defaultTodos.map(todo => (

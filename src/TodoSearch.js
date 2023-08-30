@@ -1,10 +1,9 @@
 import React from 'react';
 import './TodoSearch.css'
 
-function TodoSearch(){
+function TodoSearch({search, setSearch}){
     
-    const [state, setState] = React.useState('');
-     // To work with the state we cant just change it as we would with any variable, we need to use a function to work with it
+     // To work with the search we cant just change it as we would with any variable, we need to use a function to work with it
     // Changer function
     // the reason why  we would do this is to tell react the we need to re render the component to change it, 
 
@@ -12,9 +11,9 @@ function TodoSearch(){
             <input 
             className='TodoSearch' 
             placeholder="Search Todo"
-            value={state}
+            value={search}
             onChange={(event) => {
-                setState(event.target.value)
+                setSearch(event.target.value)
             }}
             >
 
