@@ -37,10 +37,13 @@ li{
 }
 
 .TodoItem-ready{
-    
     background-color: #375205b0;
+}
+
+.TodoItem-ready p{
     text-decoration:line-through;
 }
+
 
 
 .TodoItem-checket::before{
