@@ -28,6 +28,7 @@ const defaultTodos = [
 ];
 
 
+
 // in case I want to send , not a div containing all the elment insinde of the app but all the elements without breaking the rule of react
 // that keeps you from sending more than one element per return in any component we can use React.
 function App() {
@@ -39,6 +40,7 @@ function App() {
     const todoText = todo.text.toLowerCase();
     return todoText.includes(searchText);
   });
+  
 
   const completedTodo = state.filter(todo => !!todo.completed).length
   const totalTods = state.length;
@@ -49,8 +51,6 @@ function App() {
         <TodoSearch
         search={search}
         setSearch={setSearch}
-        state={state}
-        setState={setState}
         />
         <TodoCounter
           completed={completedTodo}
@@ -69,6 +69,8 @@ function App() {
       </div>
   );
 }
+
+
 
 
 // CREATING, FIRST COMPONENT 
