@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { AiOutlineClose } from "react-icons/ai";
 import './TodoItem.css';
 
 function TodoItem(props){
@@ -13,7 +13,7 @@ function TodoItem(props){
             <span onClick={props.onComplete} className={`${props.completed && 'TodoItem-checket'} circle `}>
             </span>
             <p>{props.text}</p>
-            <span onClick={props.onDelete} className={`eliminateItem pointer`}></span>
+            <span onClick={props.onDelete} className={`eliminateItem pointer`}><AiOutlineClose/></span>
         </li>
     );
 }
