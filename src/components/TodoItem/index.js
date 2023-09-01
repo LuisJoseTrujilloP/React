@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiOutlineClose } from "react-icons/ai";
-import './TodoItem.css';
+import './styles.css';
 
 function TodoItem(props){
     /*
@@ -19,15 +19,3 @@ function TodoItem(props){
 }
 
 export {TodoItem};
-
-
-// const defaultTodos = [
-//   {
-//     text: 'Cut some onions',
-//     completed: true,
-//   },
-//   {
-//     text: 'Finish React course',
-//     completed: false,
-//   },
-// ];
