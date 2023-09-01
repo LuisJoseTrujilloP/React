@@ -19,3 +19,15 @@ function TodoItem(props){
 }
 
 export {TodoItem};
+
+
+// const defaultTodos = [
+//   {
+//     text: 'Cut some onions',
+//     completed: true,
+//   },
+//   {
+//     text: 'Finish React course',
+//     completed: false,
+//   },
+// ];
