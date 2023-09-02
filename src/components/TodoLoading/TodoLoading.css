@@ -1,0 +1,16 @@
+li{
+    display: flex;
+    justify-content: center;
+}
+.loadingItem{
+    padding-right: 2px;
+    background-color: #3d3b3b3d;
+    display: flex;
+    gap: 10px;
+    margin: 0 0 6%;
+    width: 18rem;
+    border-radius: 5px;
+    height: 2.5rem;
+    align-items: center;
+    box-shadow: 2px 3px 34px -7px rgba(109, 109, 109, 0.473);
+}
