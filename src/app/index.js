@@ -1,34 +1,14 @@
 import React from 'react';
 import { AppUI } from './AppUI'
+import { useLocalStorage } from './useLocalStorage';
 
-function useLocalStorage(itemName, initialValue) {
-
-  const localStorageItem = localStorage.getItem(itemName);
-  
-  let parsedItem;
-
-  if(!localStorageItem){
-    localStorage.setItem(itemName, JSON.stringify(initialValue))
-    parsedItem = initialValue;
-  } else {
-    parsedItem = JSON.parse(localStorageItem);
-  }
-
-  const [item, setItem] = React.useState(parsedItem);
-
-  const saveItem = (newItem) => {
-    localStorage.setItem(itemName, JSON.stringify(newItem))
-    setItem(newItem)
-  } 
-
-  return [item, saveItem]
-}
 
 
 function App() {
 
-  const [state, saveItem] = useLocalStorage("TODOS_V1", []);
+  const {item: state, saveItem, loading, error} = useLocalStorage("TODOS_V1", []);
   const [search, setSearch] = React.useState('');
+  
   const searchTodos = state.filter((todo) => {
     const searchText = search.toLowerCase();
     const todoText = todo.text.toLowerCase();
@@ -49,19 +29,10 @@ function App() {
   const completedTodo = state.filter(todo => !!todo.completed).length
   const totalTods = state.length;
   
-  console.log('Log 1')
-
-  React.useEffect(() => {
-    console.log('Log 2 passed for useEffect');
-  })
-  React.useEffect(() => {
-    console.log('Log 2 passed for useEffect');
-  }, [])
-  
-  console.log('Log 3')
-
   return (
     <AppUI
+      loading={loading}
+      error={error}
       completedTodo={completedTodo}
       totalTods={totalTods}
       search={search}
