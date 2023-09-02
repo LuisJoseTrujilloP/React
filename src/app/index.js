@@ -49,6 +49,13 @@ function App() {
   const completedTodo = state.filter(todo => !!todo.completed).length
   const totalTods = state.length;
   
+  console.log('Log 1')
+
+  React.useEffect(() => {
+    console.log('Log 2 passed for useEffect');
+  })
+  console.log('Log 3')
+
   return (
     <AppUI
       completedTodo={completedTodo}
