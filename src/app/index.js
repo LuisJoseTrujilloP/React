@@ -54,6 +54,10 @@ function App() {
   React.useEffect(() => {
     console.log('Log 2 passed for useEffect');
   })
+  React.useEffect(() => {
+    console.log('Log 2 passed for useEffect');
+  }, [])
+  
   console.log('Log 3')
 
   return (
