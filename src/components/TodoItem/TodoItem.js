@@ -3,6 +3,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import './styles.css';
 
 function TodoItem(props){
+
     /*
     function deleteTask(id){
         document.getElementById(id).remove();

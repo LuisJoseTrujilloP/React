@@ -50,6 +50,7 @@ background-image: linear-gradient( to bottom, #375205b0, #bbff3db0);
 
 
 .TodoItem-checket::before{
+    text-align: center;
     color: white;
     content: '✓';
     background-color: #bbff3db0;
