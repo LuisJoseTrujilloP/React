@@ -18,29 +18,52 @@ export default App;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // CREATING, FIRST COMPONENT 
 
-const defaultTodos = [
-  {
-    text: 'Cut some onions',
-    completed: true,
-  },
-  {
-    text: 'Finish React course',
-    completed: false,
-  },
-  {
-    text: 'Finished class #10',
-    completed: true,
-  },
-  {
-    text: 'Make coffee',
-    completed: false,
-  },
-];
+// const defaultTodos = [
+//   {
+//     text: 'Cut some onions',
+//     completed: true,
+//   },
+//   {
+//     text: 'Finish React course',
+//     completed: false,
+//   },
+//   {
+//     text: 'Finished class #10',
+//     completed: true,
+//   },
+//   {
+//     text: 'Make coffee',
+//     completed: false,
+//   },
+// ];
 
-const list = JSON.stringify(defaultTodos)
-localStorage.setItem("TODOS_V1", list)
+// const list = JSON.stringify(defaultTodos)
+// localStorage.setItem("TODOS_V1", list)
 
 // const todosString = JSON.stringify(defaultTodos)
 // localStorage.setItem("TODOS_V1", defaultTodos);
