@@ -40,7 +40,7 @@ background-image: linear-gradient( to bottom, #375205b0, #bbff3db0);
 }
 
 .TodoItem-ready{
-    background-color: #375205b0;
+    box-shadow: 0px 5px 25px rgba(97, 218, 250, 0.5)
 }
 
 .TodoItem-ready p{
@@ -49,8 +49,18 @@ background-image: linear-gradient( to bottom, #375205b0, #bbff3db0);
 
 
 
-.TodoItem-checket::before{
-    text-align: center;
+.TodoItem-checket::after{
+
+    content: '';
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    bottom: 1rem;
+    background-color: #bbff3db0;
+    border-radius: 50%;
+    top: 4px;
+    left: 4px;
+    text-align:center;
     color: white;
     content: '✓';
     background-color: #bbff3db0;
